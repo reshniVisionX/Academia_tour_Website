@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+   <link rel="stylesheet" href="Css/contact.css">
+</head>
+<body>
+
+<header>
+    <h1>Contact Us</h1>
+</header>
+
+<section class="contact-info" style="text-align: center;">
+    <h2>Contact Information</h2><br>
+    <p><b>Email:</b> contact@yourcompany.com</p>
+    <p><b>Phone:</b> +1 (123) 456-7890 (Mon-Fri, 9 AM - 5 PM)</p>
+    <p><b>Address: </b>123 Main Street, Cityville, Country</p>
+</section>
+<section>
+    
+<h2 style="text-align: center;color: #0ceedf;">Select Your Country</h2>
+<div class="search">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for country names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="#">Canada</a></li>
+  <li><a href="#">Australia</a></li>
+  <li><a href="#">Ireland</a></li>
+  <li><a href="#">france</a></li>
+  <li><a href="#">New-Zealand</a></li>
+  <li><a href="#">Switchzerland</a></li>
+  <li><a href="#">America</a></li>
+  <li><a href="#">Europe</a></li>
+</ul>
+</div>
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</section>
+<section class="contact-form">
+    <h2 style="text-align: center;">Get in Touch</h2>
+    <h1 style="font-size: 42px;font-weight: bold;text-align: center;">Get Free Consultation</h1>
+    <h2 style="font-size: 36px;font-weight: bold;text-align: center;">Want to get in touch? We’d love to hear from you.</h2><br>
+    <div class="flex-item">
+        <div class="form-reg">
+          <form method="get">
+            <fieldset>
+                <legend><b style="font-size: 26px;color: #0ceedf;">Fill the Registration Form</b></legend>
+                <input type="radio" name="salutation" id="sal" value="mr">Mr
+                <input type="radio" name="salutation" id="sal" value="mrs">Mrs
+                <input type="radio" name="salutation" id="sal" value="ms">Ms
+                 <br><br>
+                <input type="text" style="height:25px;" name="name" id="id" placeholder="Name"
+                    pattern="^[a-zA-z]{4,20}[.]?[a-zA-Z]{0,3}$" title="Invalid Name" required><br><br>
+                <input type="text" style="height :25px" name="email" id="email" placeholder="Email"
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Invalid Email id"
+                    required><br><br>
+                <input type="password" name="pass" id="pass" placeholder="Password" required><br><br>
+
+
+                <input type="tel" name="phone" id="phone" placeholder="+91 (Mobiles)" pattern="[1-9][0-9]{10}"
+                    required><br><br>
+                <input type="date" name="dob" id="dob"><br><br>
+                
+                <input type="radio" name="gender" id="gender" value="male">Male
+                <input type="radio" name="gender" id="gender" value="female">Female
+                <input type="radio" name="gender" id="gender" value="others">Others
+                <br><br>
+                <textarea type="textarea" name="remark" id="remark" placeholder="Residential address"></textarea><br>
+                <br><br>
+                <select name="city" id="city" >
+                    <option>----City----</option>
+                    <option>Chennai</option>
+                    <option>Bangalore</option>
+                    <option>Coimbatore</option>
+                    <option>Trichy</option>
+                    <option>Madurai</option>
+                </select><br><br>
+      
+                <select name="country" id="country" >
+                    <option>----Preffered Country----</option>
+                    <option>Australia</option>
+                    <option>Canada</option>
+                    <option>America</option>
+                    <option>New Zealand</option>
+                    <option>Ireland</option>
+                    <option>Switcherland</option>
+                </select><br><br>
+
+                <input type="submit">
+            </fieldset>
+        </form>
+      </div>
+      <div class="display-item">
+        <h1 style="color: #0ceedf; text-align: center;">Call us Now..!!</h1>
+        <div class="flag">
+            <img src="http://www.pngall.com/wp-content/uploads/2016/06/Canada-Flag-PNG-Picture.png">
+            <h2>+1 604-688-1320</h2>
+        </div>
+        <div class="flag">
+            <img src="https://www.freepnglogos.com/uploads/france-flag-png/france-flag-transparent-images-only-13.png">
+            <h2>+971-42865134</h2>
+        </div>
+        <div class="flag">
+            <img src="logos/newzealand.png">
+            <h2>+974 30896449</h2>
+        </div>
+        <div class="flag">
+            <img src="https://cdn.pixabay.com/photo/2017/06/20/17/21/international-2423859_960_720.png">
+            <h2>+91-75-94088000</h2>
+        </div>
+       <br>
+        <button type = "button" id="btn">Locate Us</button>
+     </div>
+    </div>
+
+   
+</section>
+
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {};
+    var Tawk_LoadStart = new Date();
+
+    (function () {
+        var s1 = document.createElement("script");
+        var s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'YOUR_TAWKTO_WIDGET_CODE_URL'; // Replace with your actual widget code URL
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+
+
+<div class="chat-popup" id="chatPopup">
+    <div class="chat-popup-header">
+        <span class="chat-popup-title">Chat with our mentors</span>
+        <button class="chat-popup-close" onclick="toggleChatPopup()">×</button>
+    </div>
+    <div class="chat-popup-body" id="chatBody" style="background-color: aliceblue;">
+       <p><b>Hi..,Feel free to ask your query! We are here to help you</b></p>
+       <p id="userMessages"></p>
+    </div>
+    <div class="chat-popup-footer">
+        <input type="text" id="chatInput" placeholder="Type your message..."></input>
+        <button onclick="sendMessage()" style="background-color: #0ceedf;color: aliceblue;">Send</button>
+    </div>
+</div>
+
+<div class="floating-chat-circle" id="floatingChatCircle" onclick="toggleChatPopup()">
+    <img src="https://icon-library.com/images/chat-icon-png/chat-icon-png-22.jpg" alt="Chat Icon">
+</div>
+
+<script>
+    let chatPopupVisible = false;
+
+    function toggleChatPopup() {
+        const chatPopup = document.getElementById('chatPopup');
+        chatPopup.style.display = chatPopupVisible ? 'none' : 'block';
+        chatPopupVisible = !chatPopupVisible;
+    }
+
+    function sendMessage() {
+        const chatInput = document.getElementById('chatInput');
+        const userMessages = document.getElementById('userMessages');
+        const message = chatInput.value.trim();
+
+        if (message !== '') {
+            const newMessage = document.createElement('p');
+            newMessage.textContent = message;
+            userMessages.appendChild(newMessage);
+            chatInput.value = '';
+        }
+    }
+</script>
+
+
+<footer>
+    <h2>HURRY UP! CONTACT US TODAY AND GET</h2>
+    <h1>FREE FIRST CONSULTATION!</h1>
+    <button type="button" id="btn">BOOK YOUR CONSULTATION</button>
+
+</footer>
+</body>
+</html>

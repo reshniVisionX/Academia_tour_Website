@@ -14,11 +14,13 @@
     <div class="header">
         <div class="head-container">
 
-            <h1><span style="color: #0ceedf;">Way</span> <span style="color:#170234">To</span>Go </h1>
+            <h1 style="display: inline-block;"><span style="color: #0ceedf;">Way</span> <span
+                    style="color:#170234">To</span>Go </h1>
+            <img src="logos/logo.png" style="display: inline-block;height: 50px; width:50px;">
         </div>
         <div class="navbar">
 
-            <h3><a href="#">Home</a></h3>
+            <h3><a href="Home.html">Home</a></h3>
             <h3><a href="mostop.html">Most opted</a></h3>
             <h3><a href="destinations.html">Our Destinations</a></h3>
             <h3><a href="service.html">Our Services</a></h3>
@@ -137,20 +139,29 @@
             var username = document.getElementById('uname').value;
 
             var str = document.getElementById("psw").value;
+            if (username.match(/^[^\s@]+@[^\s@]+\.[^\s@]{2,4}$/))
+                ok = true;
             if (str.match(/[a-z]/g) && str.match(
                 /[A-Z]/g) && str.match(
                     /[0-9]/g) && str.match(
                         /[^a-zA-Z\d]/g) && str.length >= 8)
                 res = true;
-            if (username.match(/^[^\s@]+@[^\s@]+\.[^\s@]{2,4}$/))
-                ok = true;
+
             if (!ok) {
                 var element = document.getElementById('uname');
                 element.style.backgroundColor = 'red';
             }
+            else {
+                var element = document.getElementById('uname');
+                element.style.backgroundColor = 'lightblue';
+            }
             if (!res) {
                 var element = document.getElementById('psw');
                 element.style.backgroundColor = 'red';
+            }
+            else {
+                var element = document.getElementById('psw');
+                element.style.backgroundColor = 'lightblue';
             }
             if (ok === true && res === true) {
                 window.location.href = 'contact.html';
@@ -194,7 +205,8 @@
     </div>
 
     <br><br>
-    <h2 style="text-align: center;background-color:#95fdf6;color: white;font-size: 36px;margin:10px;padding: 30px;">
+    <h2
+        style=" text-align: center;background-color:#c1f8f4;color: rgb(5, 5, 5);font-size: 36px;margin:10px;padding: 30px;">
         Execlusive Immigration Tool by WayTogo</h2>
     <div class="row">
         <div class="column">
@@ -232,6 +244,76 @@
 
     </div>
     <br><br>
+
+    <div class="scroll">
+        <h2>Visa Process</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+    <div class="visa">
+
+        <div class="content">
+            <h2>5 things an immigration officer checks in your student visa </h2>
+            <dt>1. Funding status
+            <dd>Each country has a very specific financial requirement for granting student visa and hence factors like
+                source of funding, financial sponsors, acceptable financial institutions, etc., vary sharply from
+                country to country. It is important that you spend a good amount of time in understanding these specific
+                requirements and start working on your financial documents much before applying for your student visa.
+            </dd>
+            </dt>
+            <dt>2. Bonafide documents
+            <dd>Immigration bodies have access to many sources to verify the documents you submit with your visa
+                application. Any potential fraud can lead to visa refusals besides putting any future visa applications
+                into high risk category for other countries as well. So, I will advise you to ensure that you submit
+                only genuine and verified documents with your visa application to be granted approval. </dd>
+            </dt>
+            <dt>3. Genuineness of seeking student visa
+            <dd>Student visa is a temporary visa for you to seek entry into a country to study and obtain a degree. You
+                need to demonstrate your genuine intention of entering into a country for the purpose of quality
+                education and how that will add value to your career. Some countries assess the genuineness of your
+                application based on documents that you have provided, some may ask for a specific Statement of Purpose
+                (SOP) for visa while some may conduct a telephonic or face-to-face interview. </dd>
+            </dt>
+            <dt>4. Personal ties and circumstances
+            <dd>Some immigration bodies look more into the details of your personal ties with your home country,
+                personal circumstances and economic connections. They prefer to understand what motivates you to return
+                to your home country after the completion of your course. </dd>
+            </dt>
+            <dt>5. Health checks are crucial
+            <dd>Most immigration bodies ask you to undertake a medical examination prior to applying for a student visa.
+                This is because many countries have their own health requirements which they want met with before they
+                allow anyone to enter their territory. The type of health checks varies with respect to length of stay
+                and destination country.</dd>
+            </dt>
+
+            <p>While you can find all the checklist and information on the immigration websites, it might be difficult
+                for you to comprehend some of the key information. I highly recommend that you take free visa
+                counselling from an WayTogo expert who can guide you towards preparing your visa application. Why take a
+                chance with your visa application, right?</p>
+        </div>
+        <div class="side_image">
+            <div class="rowa">
+                <img src="images/fly.jpg">
+            </div>
+            <div class="rowb">
+                <img src="https://images8.alphacoders.com/786/786525.jpg" style="display: inline;">
+                <button type="button" id="vi-cal" style="display: inline;">Call</button>
+                <button type="button" id="button">Talk to our Visa Expert</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+    <br></br><br>
     <h1 style="font-size: 42px;font-weight: bold;text-align: center;">Get Free Consultation</h1>
     <h2 style="font-size: 36px;font-weight: bold;text-align: center;">Want to get in touch? We’d love to hear from you.
     </h2><br>
@@ -282,7 +364,7 @@
                         <option>Switcherland</option>
                     </select><br><br>
 
-                    <input type="submit">
+                    <button type="submit" id="button">Submit</button>
                 </fieldset>
             </form>
         </div>
@@ -305,8 +387,11 @@
                 <img src="https://cdn.pixabay.com/photo/2017/06/20/17/21/international-2423859_960_720.png">
                 <h2>+91-75-94088000</h2>
             </div>
+            <div class = "more">
+                <img src="http://www.clker.com/cliparts/t/4/E/h/z/U/load-all-button-hi.png">
+            </div>
             <br>
-            <button type="button">Locate Us</button>
+            <button type="submit" id="button">Locate Us</button>
         </div>
     </div>
     <br><br>
@@ -339,6 +424,7 @@
             chatPopup.style.display = chatPopupVisible ? 'none' : 'block';
             chatPopupVisible = !chatPopupVisible;
         }
+        setTimeout(toggleChatPopup(), 2000);
 
         function sendMessage() {
             const chatInput = document.getElementById('chatInput');
@@ -358,8 +444,22 @@
     <footer>
         <h2>HURRY UP! CONTACT US TODAY AND GET</h2>
         <h1>FREE FIRST CONSULTATION!</h1>
-        <button type="button" id="btn">BOOK YOUR CONSULTATION</button>
+        <button type="button" id="btnf">BOOK YOUR CONSULTATION</button>
 
+        <h2>Follow us on social media</h2>
+        <div class="social_media">
+            <img src="https://images.vexels.com/media/users/3/223136/isolated/preview/984f500cf9de4519b02b354346eb72e0-facebook-icon-social-media-by-vexels.png"
+                class="fa fa-facebook"></img>
+            <img src="http://icons.iconarchive.com/icons/iynque/ios7-style/1024/Twitter-icon.png" class="fa fa-twitter">
+            </imh>
+            <img src="http://clipart-library.com/new_gallery/410617_facebook-icon-transparent-png.jpg"
+                class="fa fa-instagram"></img>
+            <img src="http://www.clipartbest.com/cliparts/yio/6Xo/yio6XoAyT.png" class="fa fa-youtube"></img>
+            <img src="https://clipground.com/images/pinterest-logo-clipart-transparent-background.png"
+                class="fa fa-pinterest"></img>
+            <img src="https://1.bp.blogspot.com/-onvhHUdW1Us/YI52e9j4eKI/AAAAAAAAE4c/6s9wzOpIDYcAo4YmTX1Qg51OlwMFmilFACLcBGAsYHQ/s1600/Logo%2BLinkedin.png"
+                class="fa fa-linkedin"></img>
+        </div>
     </footer>
     <div class="foot">
         <div class="footer2">

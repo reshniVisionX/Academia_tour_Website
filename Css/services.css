@@ -1,6 +1,9 @@
-h1{
-    padding-top: 6px;
-    color:rgb(5, 83, 57);
+body{
+  margin: 0;
+}
+.glow h1{
+    padding-top: 10px;
+    color:rgb(13, 173, 171);
     text-align: center;
     padding-bottom: 30px;
     border-width: 100%;
@@ -12,8 +15,9 @@ h1{
 }
 
 .glow {
+    margin-top: 120px;
     font-size: 80px;
-    color: #fff;
+    color: #000000;
     text-align: center;
     animation: glow 1s ease-in-out infinite alternate;
   }
